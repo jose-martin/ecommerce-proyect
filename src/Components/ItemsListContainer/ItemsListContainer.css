@@ -1,0 +1,12 @@
+.contenedor-mensaje {
+    width: 100%;
+    height: 400px;
+    background-color: lightgrey;
+   
+}
+
+.contenedor-mensaje {
+    font-size: 2rem;
+  text-align: center;
+  color: black;
+}

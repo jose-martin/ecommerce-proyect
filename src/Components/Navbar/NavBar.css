@@ -1,0 +1,35 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+    background-color: #3927;
+
+}
+
+.logo-img {
+    width: 120px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+}
+
+.menu-Item {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+.menu {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
