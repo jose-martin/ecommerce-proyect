@@ -1,9 +1,17 @@
 import React from "react";
 import "../ItemsListContainer/ItemsListContainer.css";
-const ItemsListContainer = ({ mensaje }) => {
+import { data } from "../../data/data";
+import ItemDetail from "../ItemDetail/ItemDetail";
+
+const ItemsListContainer = ({ type }) => {
+  const productos = type
+    ? data.filter((producto) => producto.type == type)
+    : data;
   return (
-    <div className="contenedor-mensaje">
-      <p className="mensaje-uno">{mensaje}</p>
+    <div className="contenedor-lista">
+      {productos.map((product) => (
+        <ItemDetail product={product} key={product.id} />
+      ))}
     </div>
   );
 };

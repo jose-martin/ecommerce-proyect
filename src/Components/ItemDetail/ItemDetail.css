@@ -1,0 +1,35 @@
+.item-detail {
+  border: black 2px solid;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 350px;
+  width: 200px;
+}
+
+.item-detail h3 {
+  font-weight: 700;
+  height: 30px;
+  text-align: center;
+  margin: 0;
+
+  color: black;
+}
+
+.item-detail span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+.item-detail img {
+  width: 200px;
+  object-fit: cover;
+  height: 320px;
+}

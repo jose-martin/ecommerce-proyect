@@ -1,12 +1,16 @@
-.contenedor-mensaje {
+.contenedor-lista {
+  padding: 20px;
     width: 100%;
-    height: 400px;
-    background-color: lightgrey;
-   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+  justify-items: center;
+  align-items: center;
 }
 
-.contenedor-mensaje {
+.mensaje-uno{
     font-size: 2rem;
   text-align: center;
   color: black;
+  margin:0;
 }

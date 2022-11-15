@@ -1,0 +1,31 @@
+.page-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 550px;
+  background-color:darkgray;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  gap: 1rem;
+  border: 2px solid black;
+}
+.page-detail h3{
+    color: crimson;
+    font-size: 20px;
+    font-weight: 600;
+}
+.page-detail span{
+    font-size: 1.5rem;
+}
+
+.img-detalle{
+    width: 350px;
+    height: 350px;
+    padding: 0px 10px;
+}
+.agregar-carrito{
+padding: 10px 30px;
+border-style: solid;
+width: 100%
+}
