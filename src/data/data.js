@@ -10,6 +10,7 @@ export const data = [
     color: "azul clasico",
     foto: "https://www.gamarra.com.pe/wp-content/uploads/2020/04/Pantal%C3%B3n-Jeans-Strech-1-Bot%C3%B3n-Rasgado-Corte-Coraz%C3%B3n.jpg",
     precio: 50,
+    descripcion:"Pantalon de Dama en tela strech",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const data = [
     color: "celeste clasico",
     foto: "https://http2.mlstatic.com/D_NQ_NP_827808-MPE49323475462_032022-W.jpg",
     precio: 40,
+    descripcion:"Pantalon de Dama en tela strech",
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const data = [
     color: "blanco clasico",
     foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdytQaXuSqv5lTBGSMzSkwGNDZ0mBkbCoXpvmL7bvFtt6wERPyy3u_vF9VAf32kVIQpw&usqp=CAU",
     precio: 60,
+    descripcion:"Pantalon de Dama en tela strech",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const data = [
     color: "azul clasico",
     foto: "https://falabella.scene7.com/is/image/FalabellaPE/18780440_4?wid=800&hei=800&qlt=70",
     precio: 30,
+    descripcion:"Pantalon de Niña en tela strech",
   },
   {
     id: 5,
@@ -42,6 +46,7 @@ export const data = [
     color: "celeste",
     foto: "https://www.gap.com.pe/media/catalog/product/cache/image/700x560/e9c3970ab036de70892d86c6d221abfe/7/0/707428_c00_1.jpg",
     precio: 70,
+    descripcion:"Casaca Niña en tela Sintetica, corta vientos diversos colores",
   },
   {
     id: 6,
@@ -50,5 +55,6 @@ export const data = [
     color: "azul clasico",
     foto: "https://i.pinimg.com/236x/7d/9d/87/7d9d87010ff483ffa2ab5ff3f72335d4.jpg",
     precio: 80,
+    descripcion:"Overol Niña en tela de Estacion",
   },
 ];

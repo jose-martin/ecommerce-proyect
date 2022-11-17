@@ -21,6 +21,7 @@ const PageDetail = () => {
       <button className="agregar-carrito">Comprar</button>
 
       </Link>
+      <p className="description">{producto.descripcion}</p>
 
     </div>
   );
