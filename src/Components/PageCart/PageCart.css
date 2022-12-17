@@ -1,0 +1,30 @@
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.img-cart {
+  width: 100px;
+  height: 100px;
+}
+.vaciar {
+    padding: 10px 20px;
+  margin-left: 30rem;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+
+}
+.total{
+    margin-left: 30rem;
+font-size: 3rem;
+}
+.seguir{
+    margin-top: 1rem;
+  margin-left: 33rem;
+  padding: 10px 20px;
+}

@@ -2,10 +2,11 @@ import "../ItemCount/ItemCount.css";
 const ItemCount = ({ setCount }) => {
   const addItem = () => {
     setCount((currentValue) => {
-      if (currentValue >= 10) {
+      if (currentValue === 10) {
         alert("Limite de Compra");
-      } else {
-        return currentValue + 1;
+        return currentValue;
+      }else{
+      return currentValue + 1;
       }
     });
   };
