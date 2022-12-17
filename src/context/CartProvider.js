@@ -4,6 +4,8 @@ export const cartContext = createContext({
   cart: [],
   total: 0,
   addToCart: (producto, cantidad) => {},
+  limpiarCarrito: () => {},
+  removeFromCart: (produ) => {},
 });
 
 export const CartProvider = ({ children }) => {
@@ -21,11 +23,13 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const limpiarCarrito = () => setCart([]);
+  const limpiarCarrito = () => {
+    setCart([]);
+  };
 
   const removeFromCart = (produ) => {
     // Usar la funcion filter y actualiza el carrito
-    setCart(cart.filter(producto => producto.id !== produ.id));
+    setCart(cart.filter((producto) => producto.id !== produ.id));
   };
 
   return (

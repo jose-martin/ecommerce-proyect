@@ -1,32 +1,32 @@
 import { useCart } from "../../context/CartProvider";
-import "../PageCart/PageCart.css"
+import "../PageCart/PageCart.css";
 import { Link } from "react-router-dom";
 export const PageCart = () => {
-  const { cart,total } = useCart();
+  const { cart, total, limpiarCarrito, removeFromCart } = useCart();
 
   return (
     <div>
       {cart.map((item) => {
         return (
           <div className="contenedor">
-            <img className ="img-cart"src={item.foto}/>
+            <img className="img-cart" src={item.foto} />
             <div className="nombre-cart">{item.nombre}</div>
             <div className="precio-cart">Precio S/.{item.precio}</div>
             <div className="cantidad-cart">Cantidad: {item.cant}</div>
+            <button onClick={() => removeFromCart(item)}>Eliminar</button>
           </div>
         );
       })}
-      <div className="total">
-        TOTAL: S/{total.toFixed(2)}
-        
-      </div>
+      <div className="total">TOTAL: S/{total.toFixed(2)}</div>
       <div className="botones">
-      <button className="vaciar">Vaciar Carrito</button>
-      <button className="terminar">Terminar Compra</button>
+        <button className="vaciar" onClick={() => limpiarCarrito()}>
+          Vaciar Carrito
+        </button>
+        <button className="terminar">Terminar Compra</button>
       </div>
       <div>
         <Link to="/">
-        <button className="seguir">Seguir Comprando</button>
+          <button className="seguir">Seguir Comprando</button>
         </Link>
       </div>
     </div>
