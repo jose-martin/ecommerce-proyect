@@ -1,9 +1,13 @@
+import eliminar from "../../img/eliminar.png"
+
+import ItemCount from "../ItemCount/ItemCount";
 import { useCart } from "../../context/CartProvider";
 import "../PageCart/PageCart.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 export const PageCart = () => {
-  const { cart, total, limpiarCarrito, removeFromCart } = useCart();
-
+  const { cart, total, limpiarCarrito, removeFromCart, terminarCompra } = useCart();
+  
   return (
     <div>
       {cart.map((item) => {
@@ -13,7 +17,11 @@ export const PageCart = () => {
             <div className="nombre-cart">{item.nombre}</div>
             <div className="precio-cart">Precio S/.{item.precio}</div>
             <div className="cantidad-cart">Cantidad: {item.cant}</div>
-            <button onClick={() => removeFromCart(item)}>Eliminar</button>
+            
+            <div>
+               <img onClick={() => removeFromCart(item)}  src={eliminar} alt="eliminar" className="eliminar"/>
+              </div>
+              
           </div>
         );
       })}
@@ -22,7 +30,7 @@ export const PageCart = () => {
         <button className="vaciar" onClick={() => limpiarCarrito()}>
           Vaciar Carrito
         </button>
-        <button className="terminar">Terminar Compra</button>
+        <button className="terminar" onClick={terminarCompra}>Terminar Compra</button>
       </div>
       <div>
         <Link to="/">

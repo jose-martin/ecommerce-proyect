@@ -34,7 +34,7 @@ const PageDetail = () => {
         </button>
 
       <p className="description">{producto.descripcion}</p>
-      <span>{count}</span>
+      <span className="contador">{count}</span>
       <ItemCount setCount={setCount} />
     </div>
   );

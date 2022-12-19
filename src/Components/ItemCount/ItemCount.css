@@ -1,13 +1,15 @@
 .suma {
   color: blue;
   padding: 1px 30px;
+  
 }
 .resta {
   color: red;
   padding: 1px 30px;
 }
-.contenedor {
-  display: flex;
-  gap: 2rem;
-  margin-top: -40px;
+.contenedor{
+  margin-top: -10rem;
 }
+
+
+

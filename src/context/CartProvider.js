@@ -22,7 +22,9 @@ export const CartProvider = ({ children }) => {
       setCart([...newCart]);
     }
   };
-
+  const terminarCompra = () => {
+    return alert("Gracias por su compra", limpiarCarrito());
+  };
   const limpiarCarrito = () => {
     setCart([]);
   };
@@ -43,6 +45,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         limpiarCarrito,
         removeFromCart,
+        terminarCompra,
       }}
     >
       {children}
