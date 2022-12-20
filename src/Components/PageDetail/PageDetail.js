@@ -1,7 +1,6 @@
 import { useParams,useNavigate } from "react-router-dom";
 import { data } from "../../data/data";
 import "../PageDetail/PageDetail.css";
-import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 import { useCart } from "../../context/CartProvider";
@@ -34,8 +33,9 @@ const PageDetail = () => {
         </button>
 
       <p className="description">{producto.descripcion}</p>
-      <span className="contador">{count}</span>
       <ItemCount setCount={setCount} />
+      <span className="contador">{count}</span>
+      
     </div>
   );
 };

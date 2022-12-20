@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 export const PageCart = () => {
   const { cart, total, limpiarCarrito, removeFromCart, terminarCompra } = useCart();
-  
+  const [count,setCount]=useState(1);
   return (
     <div>
       {cart.map((item) => {
@@ -19,9 +19,12 @@ export const PageCart = () => {
             <div className="cantidad-cart">Cantidad: {item.cant}</div>
             
             <div>
-               <img onClick={() => removeFromCart(item)}  src={eliminar} alt="eliminar" className="eliminar"/>
-              </div>
               
+               <img onClick={() => removeFromCart(item)}  src={eliminar} alt="eliminar" className="eliminar"/>
+               <ItemCount setCount={setCount}/>
+               
+              </div>
+             
           </div>
         );
       })}
