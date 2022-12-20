@@ -1,30 +1,20 @@
+import { useCart } from "../../context/CartProvider";
 import "../ItemCount/ItemCount.css";
-const ItemCount = ({ setCount }) => {
-  const addItem = () => {
-    setCount((currentValue) => {
-      if (currentValue === 10) {
-        alert("Limite de Compra");
-        return currentValue;
-      }else{
-      return currentValue + 1;
-      }
-    });
-  };
-  const removeItem = () => {
-    setCount((currentValue) => {
-      if (currentValue > 1) {
-        return currentValue - 1;
-      } else {
-        return currentValue;
-      }
-    });
-  };
+const ItemCount = ({ producto }) => {
+  const { agregarDisminuirCarrito } = useCart();
+
   return (
     <div className="contenedor">
-      <button onClick={addItem} className="suma">
+      <button
+        onClick={() => agregarDisminuirCarrito(producto, 1)}
+        className="suma"
+      >
         +
       </button>
-      <button onClick={removeItem} className="resta">
+      <button
+        onClick={() => agregarDisminuirCarrito(producto, -1)}
+        className="resta"
+      >
         -
       </button>
     </div>

@@ -6,6 +6,7 @@ export const cartContext = createContext({
   addToCart: (producto, cantidad) => {},
   limpiarCarrito: () => {},
   removeFromCart: (produ) => {},
+  agregarDisminuirCarrito:(producto,cantidad)=>{},
 });
 
 export const CartProvider = ({ children }) => {
@@ -34,6 +35,29 @@ export const CartProvider = ({ children }) => {
     setCart(cart.filter((producto) => producto.id !== produ.id));
   };
 
+ // @param {*} produ
+ // @param {number} cantidad
+
+  const agregarDisminuirCarrito=(produ,cantidad)=>{
+    const newCart=cart.slice();
+    const producto=newCart.find((x)=>x.id===produ.id);
+
+    if (!producto){
+alert("El producto no existe en el carrito");
+      
+    }else{
+      if (producto.cant>=10&&cantidad>0){
+        alert("Limite de compra");
+        return;
+      }else if (producto.cant===1&&cantidad<0){
+        alert("Limite de reduccion de producto");
+        return;
+      }
+      producto.cant+=Number(cantidad);
+    }
+setCart(newCart);
+  };
+
   return (
     <cartContext.Provider
       value={{
@@ -46,6 +70,7 @@ export const CartProvider = ({ children }) => {
         limpiarCarrito,
         removeFromCart,
         terminarCompra,
+        agregarDisminuirCarrito,
       }}
     >
       {children}

@@ -20,8 +20,11 @@ export const PageCart = () => {
             
             <div>
               
-               <img onClick={() => removeFromCart(item)}  src={eliminar} alt="eliminar" className="eliminar"/>
-               <ItemCount setCount={setCount}/>
+               <img onClick={() => removeFromCart(item)} 
+                src={eliminar} 
+                alt="eliminar" 
+                className="eliminar"/>
+               <ItemCount producto={item}/>
                
               </div>
              
